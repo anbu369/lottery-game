@@ -4,7 +4,10 @@
   "description": "Simple lottery game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "set NODE_ENV=production & node , --harmony , index.js",
+    "dev": "set NODE_ENV=development & node , --debug , --harmony , index.js",
+    "local": "set NODE_ENV=local & nodemon , --debug , --harmony , index.js",
+    "test": "./node_modules/.bin/mocha , --reporter , spec"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/anbu369/lottery-game/issues"
   },
-  "homepage": "https://github.com/anbu369/lottery-game#readme"
+  "homepage": "https://github.com/anbu369/lottery-game#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.20"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
 }
