@@ -7,6 +7,8 @@
 let mongoose = require('mongoose')
 let express = require("express")
 let app = express()
+
+//Helpers
 let config = require('./config')
 
 //Database connection
