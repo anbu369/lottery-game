@@ -10,8 +10,8 @@ let router = express.Router()
 let bodyParser = require('body-parser')
 
 //Helpers
-let variables = require('../variables')
-let config = require('../config')
+let variables = require('../helpers/variables')
+let config = require('../helpers/config')
 
 //Models
 let Ticket = require('./Ticket')

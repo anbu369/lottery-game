@@ -9,10 +9,29 @@ let express = require("express")
 let app = express()
 
 //Helpers
-let config = require('./config')
+let config = require('./helpers/config')
+
+//Switch db based on the environment
+let db = ''
+switch(process.env.NODE_ENV.replace(/\s/g, "")){
+    case 'production':
+        db = config.db_prod
+        break
+    case 'development':
+        db = config.db_dev
+        break
+    case 'local':
+        db = config.db_local
+        break
+    case 'test':
+        db = config.db_test
+        break
+    default:
+        db = config.db_local
+}
 
 //Database connection
-mongoose.connect(config.db, {useNewUrlParser: true}).catch((err) => {
+mongoose.connect(db, {useNewUrlParser: true}).catch((err) => {
     console.log(`Error starting database: ${err.stack}`)
 })
 

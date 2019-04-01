@@ -7,7 +7,7 @@
 let mongoose = require('mongoose')
 
 //Helpers
-let config = require('../config')
+let config = require('../helpers/config')
 
 /**
  * @description Create a schema for the Line model.

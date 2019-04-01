@@ -7,7 +7,10 @@
  */
 module.exports = {
     'port': process.env.port || 3000,
-    'db': 'mongodb://localhost:27017/lotteryGame',
+    'db_prod': 'mongodb://localhost:27017/lotteryGame',
+    'db_dev': 'mongodb://localhost:27017/lotteryGameDev',
+    'db_local': 'mongodb://localhost:27017/lotteryGameLocal',
+    'db_test': 'mongodb://localhost:27017/lotteryGameTest',
     'API_PREFIX': '/api',
     'defaultNoOfLines': 3,
     'lineValuesCount': 3,

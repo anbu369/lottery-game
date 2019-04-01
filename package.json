@@ -4,9 +4,9 @@
   "description": "Simple lottery game",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=production & node , --harmony , index.js",
-    "dev": "set NODE_ENV=development & node , --debug , --harmony , index.js",
-    "local": "set NODE_ENV=local & nodemon , --debug , --harmony , index.js",
+    "start": "set NODE_ENV=production & node --harmony index.js",
+    "dev": "set NODE_ENV=development & nodemon --inspect --harmony index.js",
+    "local": "set NODE_ENV=local & nodemon --inspect --harmony index.js",
     "test": "./node_modules/.bin/mocha , --reporter , spec"
   },
   "repository": {
