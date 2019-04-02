@@ -7,7 +7,7 @@
     "start": "set NODE_ENV=production & node --harmony index.js",
     "dev": "set NODE_ENV=development & nodemon --inspect --harmony index.js",
     "local": "set NODE_ENV=local & nodemon --inspect --harmony index.js",
-    "test": "./node_modules/.bin/mocha , --reporter , spec"
+    "test": "./node_modules/.bin/mocha --reporter spec --timeout 20000"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
     "mongoose": "^5.4.20"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "supertest": "^4.0.2"
   }
 }

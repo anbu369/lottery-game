@@ -35,6 +35,8 @@ mongoose.connect(db, {useNewUrlParser: true}).catch((err) => {
     console.log(`Error starting database: ${err.stack}`)
 })
 
+let dbConnection = mongoose.connection
+
 //Initialize controller
 let ticketController = require('./tickets/ticketController')
 app.use(config.API_PREFIX, ticketController)
@@ -43,3 +45,5 @@ app.use(config.API_PREFIX, ticketController)
 app.listen(config.port, () => {
     console.log(`Server running on port ${config.port}`)
 })
+
+module.exports = app

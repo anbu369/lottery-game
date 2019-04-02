@@ -12,9 +12,9 @@ module.exports = {
     'db_local': 'mongodb://localhost:27017/lotteryGameLocal',
     'db_test': 'mongodb://localhost:27017/lotteryGameTest',
     'API_PREFIX': '/api',
-    'defaultNoOfLines': 3,
-    'lineValuesCount': 3,
-    'minLineValue': 0,
-    'maxLineValue': 2,
-    'outcomeOrder': 'ASC' //ASC or DEC
+    'defaultNoOfLines': 3, //number of lines when a new ticket is created if number of lines is not specified by user
+    'lineValuesCount': 3, //no of values in a single line
+    'minLineValue': 0, //Minimum value in a line
+    'maxLineValue': 2, //Maximum value in a line
+    'outcomeOrder': 'ASC' //ASC or DEC order for the lines to be ordered in the status
 }
